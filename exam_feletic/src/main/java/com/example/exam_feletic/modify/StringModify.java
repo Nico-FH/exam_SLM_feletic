@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RestController
 @RequestMapping("/api")
 public class StringModify {
+    private static String message;
+    private static int lastLength = 0;
 
     @GetMapping("/modify")
     public String ModifyString(String string){
@@ -23,8 +25,14 @@ public class StringModify {
 
             modifiedString.append(currentChar);
         }
+        message = modifiedString.toString();
 
-        return modifiedString.toString();
+        lastLength = message.length();
+        return message;
     }
 
+    @GetMapping("/length")
+    public int getLastLength(){
+        return lastLength;
+    }
 }
