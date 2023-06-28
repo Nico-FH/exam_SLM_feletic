@@ -10,4 +10,6 @@ public class ExamFeleticApplication {
 		SpringApplication.run(ExamFeleticApplication.class, args);
 	}
 
+
+
 }
