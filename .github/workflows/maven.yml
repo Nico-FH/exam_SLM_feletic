@@ -34,7 +34,7 @@ jobs:
     - name: upload
       uses: actions/upload-artifact@v2
       with:
-        name: exam
+        name: exam_
         path: staging
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
